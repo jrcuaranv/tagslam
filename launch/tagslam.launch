@@ -1,0 +1,7 @@
+<launch>
+  <rosparam file="$(find tagslam)/params/gtsam_params.yaml" command="load"/>
+  <rosparam file="$(find tagslam)/params/stereo_cam.yaml" command="load"/>
+  
+  <node pkg="tagslam" type="get_tags_data.py" name="factors_generator" respawn="false" output="screen"/>
+  <node pkg="tagslam" type="tagslam" name="tagslam" respawn="false" output="screen"/>
+</launch>

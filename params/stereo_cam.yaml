@@ -1,0 +1,36 @@
+apriltag_size: 0.15725
+# in current implementation, stereo left and right images come in a single image of size hx2w
+# skip_img can be used to downsample the image topics
+stereo_cam:
+  topic: /zed2i/zed_node/stereo/image_rect_color/compressed
+  skip_img: 4
+  baseline: 0.1199
+  left:
+    intrinsics:
+      fx: 527.1195678710938
+      fy: 527.1195678710938
+      cx: 635.2503051757812
+      cy: 356.53350830078125
+    dist:
+      k1: 0.0
+      k2: 0.0
+      r1: 0.0
+      r2: 0.0
+    body_P_cam_pos: [0.01272183, 0.0587216,  0.01484259]
+    # Quaternion in [qx,qy,qz,qw]
+    body_P_cam_quat: [0.50332016, -0.4974325,   0.4997589,  -0.49947048]
+
+  right:
+    intrinsics:
+      fx: 527.1195678710938
+      fy: 527.1195678710938
+      cx: 635.2503051757812
+      cy: 356.53350830078125
+    dist:
+      k1: 0.0
+      k2: 0.0
+      r1: 0.0
+      r2: 0.0
+    body_P_cam_pos: [0.01464047, -0.06089431,  0.01560121]
+    # Quaternion in [qx,qy,qz,qw]
+    body_P_cam_quat: [0.5034534,  -0.49761284,  0.49986,    -0.49905522]
