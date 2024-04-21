@@ -1,5 +1,5 @@
 tags_filepath: /home/daslab/Documents/repositories/pose_estimation/src/tagslam/data/apriltags_apt5.csv
-output_body_poses_path: /home/daslab/Documents/repositories/pose_estimation/src/tagslam/results/cam_poses.txt
+output_body_poses_path: /home/daslab/Documents/repositories/pose_estimation/src/tagslam/results/body_poses.txt
 vio_topic: /zed2i/zed_node/odom
 global_frame_id: map
 body_frame_id: zed_baselink
