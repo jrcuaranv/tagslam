@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
 It extracts the poses of the observed april tags (with PnP algorithm) and publish them in a path topic
 the header.seq of each pose corresponds to the tag_id
@@ -78,7 +79,7 @@ class ImageSubscriber:
         T_body_right = np.block([[R_body_right, t_body_right],[0,0,0,1]])
 
         T_right_body = np.linalg.inv(T_body_right)
-        self.T_rl = T_right_body @ T_body_left
+        self.T_rl = np.matmul(T_right_body, T_body_left)
         self.T_lr = np.linalg.inv(self.T_rl)
         print("Waiting for image topics...")
         rospy.spin()
