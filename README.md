@@ -1,5 +1,7 @@
 # Tagslam
 This project is intended for robot localization fusing visual odometry and apriltags observations.
+Currently, it only supports stereo images.
+Tested in ubuntu 18.04 and Ubuntu 20.04.
 
 ## Requirements
 1. ROS Noetic
