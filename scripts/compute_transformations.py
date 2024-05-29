@@ -3,9 +3,9 @@ from scipy.spatial.transform import Rotation
 
 # for zed2i stereo camera
 
-# Assuming zedbaselink is the body frame
+# Assuming zed2i_base_link is the body frame
 
-t_body_imu = [-0.012, 0.037, 0.015] # from tf tree - zed wrapper
+t_body_imu = [-0.002, 0.037, 0.015] # from tf tree - zed wrapper
 q_body_imu = [0.000, -0.001, -0.002, 1.000] # from tf tree
 R_body_imu = Rotation.from_quat(q_body_imu).as_dcm()
 T_body_imu = np.eye(4)
