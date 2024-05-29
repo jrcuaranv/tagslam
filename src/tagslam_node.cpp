@@ -18,7 +18,7 @@ TagslamNode::TagslamNode(ros::NodeHandle& nh):nh_(nh){
   factors_sub_ = nh_.subscribe("/projection_factors", 10, &TagslamNode::ProjectionFactorsCallback, this);
   vio_sub_ = nh_.subscribe(vio_topic_, 10, &TagslamNode::vioCallback, this);
 
-  odom_pub_ = nh_.advertise<nav_msgs::Odometry>("/cam_pose",10);
+  odom_pub_ = nh_.advertise<nav_msgs::Odometry>(output_topic_,10);
   
   optimizer = new tagslam::GTSAMOptimizer(isam2_params_);
   if(optimizer == nullptr){ printf("null optimizer pointer\n");}
@@ -55,6 +55,7 @@ void TagslamNode::getRosParams(){
 
   nh_.getParam("/tags_filepath", tags_filepath_);
   nh_.getParam("/vio_topic", vio_topic_);
+  nh_.getParam("/output_topic", output_topic_);
   nh_.getParam("/output_body_poses_path", output_body_poses_path_);
   nh_.getParam("/global_frame_id", global_frame_id_);
   nh_.getParam("/body_frame_id", body_frame_id_);

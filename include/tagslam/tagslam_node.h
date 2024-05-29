@@ -45,6 +45,7 @@ class TagslamNode{
   std::map<std::string, float> isam2_params_;
   std::string tags_filepath_;
   std::string vio_topic_;
+  std::string output_topic_;
   std::string output_body_poses_path_; // optimized body poses
   std::string global_frame_id_; 
   std::string body_frame_id_; 

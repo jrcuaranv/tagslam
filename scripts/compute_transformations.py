@@ -46,4 +46,6 @@ print("q_body_left",q_body_left)
 print("t_body_right",t_body_right)
 print("q_body_right",q_body_right)
 
+print("T_body_left", T_body_left)
+
 
