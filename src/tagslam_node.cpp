@@ -264,7 +264,7 @@ void TagslamNode::publishOdom(const gtsam::Pose3& pose, const ros::Time& tstamp)
   odom_pub_.publish(odom);
 }
 void TagslamNode::tfBroadcaster(const gtsam::Pose3& pose, const ros::Time& tstamp){
-  tf2_ros::TransformBroadcaster br;
+  static tf2_ros::TransformBroadcaster br;
   geometry_msgs::TransformStamped transform_stamped;
   transform_stamped.header.stamp = tstamp;
   transform_stamped.header.frame_id = global_frame_id_;
