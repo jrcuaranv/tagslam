@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 It extracts the poses of the observed april tags (with PnP algorithm) and publish them in a path topic
 the header.seq of each pose corresponds to the tag_id
@@ -10,7 +10,6 @@ These projection factors are merged in a path topic for convenience.
 
 
 from nav_msgs.msg import Path
-from cv_bridge import CvBridge
 import numpy as np
 import apriltag
 import rospy
